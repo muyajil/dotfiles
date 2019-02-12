@@ -2,6 +2,7 @@
 current_dir=$(pwd)
 bash_config_path=$current_dir/bash_prompt.sh
 echo "source $bash_config_path" >> ~/.bashrc
+echo "alias jn=\"jupyter notebook\""
 
 wget https://bootstrap.pypa.io/get_pip.py
 python3 get_pip.py
