@@ -39,4 +39,4 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt update
-sudo apt install -y google-cloud-sdk remmina code guake kubectl htop
+sudo apt install -y google-cloud-sdk remmina code guake kubectl htop texmaker
