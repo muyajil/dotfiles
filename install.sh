@@ -3,6 +3,8 @@ current_dir=$(pwd)
 bash_config_path=$current_dir/bash_prompt.sh
 echo "source $bash_config_path" >> ~/.bashrc
 echo "alias jn=\"jupyter notebook\"" >> ~/.bashrc
+echo "alias vs=\"code .\"" >> ~/.bashrc
+echo "alias jl=\"jupyter-lab\"" >> ~/.bashrc
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 
 sudo apt update
@@ -11,12 +13,7 @@ sudo apt install -y git-core python3-dev
 wget https://bootstrap.pypa.io/get-pip.py -O ./get-pip.py
 python3 ./get-pip.py
 
-sudo -H pip3 install pipenv jupyter jupyter_contrib_nbextensions jupyter_nbextensions_configurator
-
-sudo jupyter contrib nbextension install
-sudo jupyter nbextensions_configurator enable
-sudo jupyter nbextension enable hinterland/hinterland
-sudo jupyter nbextension enable codefolding/main
+sudo -H pip3 install pipenv jupyterlab
 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/

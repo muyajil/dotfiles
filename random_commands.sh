@@ -1,3 +1,3 @@
 # Add virtualenv as kernel
 pipenv install ipykernel
-pipenv run ipython kernel install --name=name
+python -m ipykernel install --user --name=dmdb_handson_session
