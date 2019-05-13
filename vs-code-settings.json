@@ -1,0 +1,6 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.linting.pep8Enabled": true,
+    "editor.minimap.enabled": false,
+    "python.linting.pep8Args": ["--max-line-length=120"]
+}

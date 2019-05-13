@@ -37,3 +37,6 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt update
 sudo apt install -y google-cloud-sdk remmina code guake kubectl htop texmaker
+
+rm ~/.config/Code/User/settings.json
+ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
