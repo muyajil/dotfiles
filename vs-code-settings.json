@@ -3,5 +3,9 @@
     "python.linting.pep8Enabled": true,
     "editor.minimap.enabled": false,
     "python.linting.pep8Args": ["--max-line-length=120"],
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "window.zoomLevel": 0,
+    "editor.wrappingIndent": "indent",
+    "editor.fontSize": 18
 }
