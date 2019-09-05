@@ -7,5 +7,10 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     "window.zoomLevel": 0,
     "editor.wrappingIndent": "indent",
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "editor.renderWhitespace": "all",
+    "files.associations": {
+        "*.yaml.template": "yaml",
+        "Dockerfile*": "dockerfile"
+    }
 }
