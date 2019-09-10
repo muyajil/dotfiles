@@ -12,6 +12,8 @@ sudo apt remove libreoffice* firefox
 sudo apt autoremove
 sudo apt install -y git-core python3-pip code slack-desktop docker.io docker-compose google-chrome-stable guake htop vlc pkgconf
 
+sudo usermod -aG docker $USER
+
 sudo -H pip3 install --upgrade pip
 sudo -H pip3 install pipenv jupyterlab
 
