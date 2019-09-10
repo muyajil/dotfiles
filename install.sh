@@ -36,7 +36,11 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt update
-sudo apt install -y google-cloud-sdk remmina code guake kubectl htop texmaker
+sudo apt install -y google-cloud-sdk remmina code guake kubectl htop
 
 rm ~/.config/Code/User/settings.json
 ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
+
+# TODO: Install VLC
+# TODO: Install pdflatex
+# TODO: Install numix icon pack
