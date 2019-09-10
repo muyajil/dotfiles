@@ -41,3 +41,4 @@ sudo apt install -y google-cloud-sdk kubectl
 
 rm ~/.config/Code/User/settings.json
 ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
+ln -s $current_dir/ssh_config ~/.ssh/config
