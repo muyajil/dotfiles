@@ -11,5 +11,6 @@
     "files.associations": {
         "*.yaml.template": "yaml",
         "Dockerfile*": "dockerfile"
-    }
+    },
+    "editor.fontSize": 18
 }
