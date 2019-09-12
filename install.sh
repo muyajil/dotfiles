@@ -15,7 +15,7 @@ sudo apt install -y git-core python3-pip code slack-desktop docker.io docker-com
 sudo usermod -aG docker $USER
 
 sudo -H pip3 install --upgrade pip
-sudo -H pip3 install pipenv jupyterlab
+sudo -H pip3 install pipenv jupyterlab pylint pep8 autopep8
 
 sudo wget -O /usr/local/bin/latexdocker https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
 sudo chmod +x /usr/local/bin/latexdocker
