@@ -39,6 +39,6 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt update
 sudo apt install -y google-cloud-sdk kubectl
 
-rm ~/.config/Code/User/settings.json
+rm ~/.config/Code/User/settings.json || true
 ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
 ln -s $current_dir/ssh_config ~/.ssh/config
