@@ -10,7 +10,7 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 sudo apt update
 sudo apt remove libreoffice* firefox
 sudo apt autoremove
-sudo apt install -y git-core python3-pip code slack-desktop docker.io docker-compose google-chrome-stable guake htop vlc pkgconf
+sudo apt install -y git-core python3-pip code slack-desktop docker.io docker-compose google-chrome-stable guake htop vlc pkgconf tlp tlp-rdw acpi-call-dkms tp-smapi-dkms acpi-call-dkms
 
 sudo usermod -aG docker $USER
 

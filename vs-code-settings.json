@@ -12,5 +12,5 @@
         "*.yaml.template": "yaml",
         "Dockerfile*": "dockerfile"
     },
-    "editor.fontSize": 18
+    "editor.fontSize": 16
 }
