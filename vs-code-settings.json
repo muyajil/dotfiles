@@ -1,8 +1,8 @@
 {
     "latex-workshop.view.pdf.viewer": "tab",
-    "python.linting.pep8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "editor.minimap.enabled": false,
-    "python.linting.pep8Args": ["--max-line-length=120"],
+    "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "python.linting.pylintEnabled": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "window.zoomLevel": 0,
