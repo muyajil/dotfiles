@@ -5,12 +5,13 @@
     "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "python.linting.pylintEnabled": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "editor.wrappingIndent": "indent",
     "editor.renderWhitespace": "all",
     "files.associations": {
         "*.yaml.template": "yaml",
         "Dockerfile*": "dockerfile"
     },
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "explorer.confirmDragAndDrop": false
 }

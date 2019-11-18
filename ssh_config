@@ -1,7 +1,7 @@
-Host mediaserver
+Host srv.ajil.ch
     HostName srv.ajil.ch
     Port 22221
     ForwardX11 yes
     Compression yes
 #   Ciphers +blowfish-cbc,arcfour
-    User srv-user
+    User muy
