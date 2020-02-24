@@ -5,3 +5,15 @@ Host srv.ajil.ch
     Compression yes
 #   Ciphers +blowfish-cbc,arcfour
     User muy
+
+# QuantCo Github
+Host github.com-mohammedajilqc
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_qc
+
+# Private Github
+Host github.com-muyajil
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
