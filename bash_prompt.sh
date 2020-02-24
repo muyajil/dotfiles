@@ -90,14 +90,6 @@ function set_nodevirtenv () {
   fi
 }
 
-function set_pipenv () {
-  if [ -e "Pipfile" ]; then
-      PIPENV="*"
-  else
-      PIPENV=""
-  fi
-}
-
 # Set the full bash prompt.
 function set_bash_prompt () {
   # Set the PROMPT_SYMBOL variable. We do this first so we don't lose the
@@ -106,8 +98,6 @@ function set_bash_prompt () {
 
   # Set the PYTHON_VIRTUALENV variable.
   set_virtualenv
-
-  set_pipenv
 
   # Set the NODE_PYTHON_VIRTUALENV variable.
   # set_nodevirtenv
@@ -123,7 +113,7 @@ function set_bash_prompt () {
 
   PROMPT_DIRTRIM=2
   # Set the bash prompt variable.
-  PS1="${LIGHT_GREEN}\u@\h ${PYTHON_VIRTUALENV}${CYAN}${PIPENV}${COLOR_NONE}${BLUE} \w${COLOR_NONE} ${KUBE} ${BRANCH}${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GREEN}\u@\h ${CYAN}(${CONDA_DEFAULT_ENV})${COLOR_NONE}${BLUE} \w${COLOR_NONE} ${KUBE} ${BRANCH}${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
