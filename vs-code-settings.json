@@ -13,5 +13,8 @@
         "Dockerfile*": "dockerfile"
     },
     "editor.fontSize": 16,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "autoDocstring.docstringFormat": "numpy",
+    "python.testing.pytestEnabled": true,
+    "terminal.integrated.inheritEnv": false
 }
