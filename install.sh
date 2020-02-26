@@ -1,10 +1,9 @@
 #!/bin/bash
 current_dir=$(pwd)
 bash_config_path=$current_dir/bash_prompt.sh
+aliases_path=$current_dir/aliases.sh
 echo "source $bash_config_path" >> ~/.bashrc
-echo "alias jn=\"jupyter notebook\"" >> ~/.bashrc
-echo "alias vs=\"code .\"" >> ~/.bashrc
-echo "alias jl=\"jupyter-lab\"" >> ~/.bashrc
+echo "source $aliases_path" >> ~/.bashrc
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 
 sudo apt update
