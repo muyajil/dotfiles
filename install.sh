@@ -2,9 +2,12 @@
 current_dir=$(pwd)
 bash_config_path=$current_dir/bash_prompt.sh
 aliases_path=$current_dir/aliases.sh
+paths_path=$current_dir/paths.sh
+env_vars_path=$current_dir/env_vars.sh
 echo "source $bash_config_path" >> ~/.bashrc
 echo "source $aliases_path" >> ~/.bashrc
-echo "source <(kubectl completion bash)" >> ~/.bashrc
+echo "source $paths_path" >> ~/.bashrc
+echo "source $env_vars_path" >> ~/.bashrc
 
 sudo apt update
 sudo apt remove libreoffice* firefox
