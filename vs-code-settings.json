@@ -12,7 +12,6 @@
         "*.yaml.template": "yaml",
         "Dockerfile*": "dockerfile"
     },
-    "editor.fontSize": 16,
     "explorer.confirmDragAndDrop": false,
     "autoDocstring.docstringFormat": "numpy",
     "python.testing.pytestEnabled": true,
@@ -23,5 +22,18 @@
         "--max-line-length=120"
     ],
     "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.highlights.enabled": true
+    "todo-tree.highlights.enabled": true,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontSize": 12
 }

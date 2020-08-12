@@ -17,3 +17,8 @@ Host github.com-muyajil
     Hostname github.com
     User git
     IdentityFile ~/.ssh/id_rsa
+
+#Host socks_proxy
+#    HostName srv.ajil.ch
+#    Port 2221
+#    DynamicForward:8080

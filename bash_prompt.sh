@@ -59,7 +59,7 @@ function set_kube_context()
     CONTEXT=$(cat ~/.kube/config | grep "current-context:" | sed "s/current-context: //")
 
     if [ -n "$CONTEXT" ]; then
-        KUBE="${YELLOW}(${CONTEXT})${COLOR_NONE}"
+        KUBE=" ${YELLOW}(${CONTEXT})${COLOR_NONE} "
     fi
 }
 
@@ -113,7 +113,7 @@ function set_bash_prompt () {
 
   PROMPT_DIRTRIM=2
   # Set the bash prompt variable.
-  PS1="${LIGHT_GREEN}\u@\h ${CYAN}(${CONDA_DEFAULT_ENV})${COLOR_NONE}${BLUE} \w${COLOR_NONE} ${KUBE} ${BRANCH}${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GREEN}\u@\h ${CYAN}(${CONDA_DEFAULT_ENV})${COLOR_NONE}${BLUE} \w${COLOR_NONE}${KUBE} ${BRANCH}${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.

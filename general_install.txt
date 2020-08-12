@@ -1,5 +1,0 @@
-- Install OS
-- Remove all unnecessary tools
-- Install chrome
-- Install vlc
-- Install numix icon pack
