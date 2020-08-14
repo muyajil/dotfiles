@@ -63,7 +63,8 @@ sudo usermod -aG docker $USER
 
 # miniconda
 curl -fsSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash /tmp/miniconda.sh
+bash /tmp/miniconda.sh -b -p $HOME/miniconda3
+conda install tabulate
 
 # LatexDocker
 sudo wget -O /usr/local/bin/latexdocker https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
