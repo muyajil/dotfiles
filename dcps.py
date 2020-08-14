@@ -11,10 +11,12 @@ table = []
 for line in lines[:-1]:
     parts = line.split('\t')
     parts[0] = parts[0].split(' ')[1]
-    project, container, _ = parts[0].split('_')
+    project, container = parts[0].split('_', 1)
+    container = container[:-2]
     image = parts[1]
     status = parts[2]
     uptime = parts[3]
-    ports = parts[4]
-    table.append([project, container, image, status, uptime, ports])
-print(tabulate(table, headers=["PROJECT", "CONTAINER", "IMAGE", "STATUS", "UPTIME", "PORTS"]))
+    ports = parts[4].strip('"')
+    table.append([project, container, image, status, ports])
+table.sort(key=lambda x: x[0]+x[1])
+print(tabulate(table, headers=["PROJECT", "CONTAINER", "IMAGE", "STATUS", "PORTS"]))
