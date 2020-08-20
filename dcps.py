@@ -2,7 +2,15 @@
 import subprocess
 from tabulate import tabulate
 
-out = subprocess.Popen(['docker','ps', '--format', '"table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.RunningFor}}\t{{.Ports}}"'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+out = subprocess.Popen(
+    [
+        'docker',
+        'ps',
+        '--format',
+        '"table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.RunningFor}}\t{{.Ports}}"'
+    ],
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT)
 
 stdout, _ = out.communicate()
 stdout = stdout.decode('utf-8')
