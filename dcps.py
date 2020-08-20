@@ -11,7 +11,11 @@ table = []
 for line in lines[:-1]:
     parts = line.split('\t')
     parts[0] = parts[0].split(' ')[1]
-    project, container = parts[0].split('_', 1)
+    try:
+        project, container = parts[0].split('_', 1)
+    except ValueError:
+        project = ""
+        container = parts[0]
     container = container[:-2]
     image = parts[1]
     status = parts[2]
