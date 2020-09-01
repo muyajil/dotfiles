@@ -1,11 +1,16 @@
 #!/bin/bash
 current_dir=$(pwd)
 
+# Add scripts
+sudo cp $current_dir/dcps.py /usr/local/bin/dcps
+sudo cp $current_dir/save_env.sh /usr/local/bin/save_env
+
 # Execute scripts in ~/.bashrc
 bash_config_path=$current_dir/bash_prompt.sh
 aliases_path=$current_dir/aliases.sh
 paths_path=$current_dir/paths.sh
 env_vars_path=$current_dir/env_vars.sh
+
 echo "source $bash_config_path" >> ~/.bashrc
 echo "source $aliases_path" >> ~/.bashrc
 echo "source $paths_path" >> ~/.bashrc
