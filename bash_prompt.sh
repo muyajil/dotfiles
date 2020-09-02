@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # The various escape codes that we can use to color our prompt.
-        RED="\[\033[0;31m\]"
+        RED="\[\033[1;31m\]"
      YELLOW="\[\033[1;33m\]"
      PURPLE="\[\033[1;35m\]"
-      GREEN="\[\033[0;32m\]"
+      GREEN="\[\033[1;32m\]"
        BLUE="\[\033[1;34m\]"
        CYAN="\[\033[1;36m\]"
   LIGHT_RED="\[\033[1;31m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
- LIGHT_GRAY="\[\033[0;37m\]"
+ LIGHT_GRAY="\[\033[1;37m\]"
+ DARK_GRAY="\[\033[1;90m\]"
  COLOR_NONE="\[\e[0m\]"
 
 # Detect whether the current directory is a git repository.
@@ -25,7 +26,7 @@ function set_git_branch {
 
   # Set color based on clean/staged/dirty.
   if [[ ${git_status} =~ "working tree clean" ]]; then
-    state="${LIGHT_GREEN}"
+    state="${GREEN}"
   elif [[ ${git_status} =~ "Changes to be committed" ]]; then
     state="${YELLOW}"
   else
@@ -101,7 +102,7 @@ function set_bash_prompt () {
 
   PROMPT_DIRTRIM=2
   # Set the bash prompt variable.
-  PS1="${LIGHT_GREEN}\u${COLOR_NONE} ${CONDA_ENV} ${KUBE} ${BRANCH} ${BLUE}\w${COLOR_NONE} ${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GREEN}\u${COLOR_NONE} / ${CONDA_ENV} / ${KUBE} / ${BRANCH} / ${BLUE}\w${COLOR_NONE} ${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
