@@ -50,7 +50,7 @@ function set_git_branch {
   fi
 
   # Set the final branch string.
-  BRANCH="${state}(${branch})${remote}${COLOR_NONE} "
+  BRANCH="${state}${branch}${remote}${COLOR_NONE}"
 }
 
 function set_kube_context()
@@ -59,7 +59,7 @@ function set_kube_context()
     CONTEXT=$(cat ~/.kube/config 2>/dev/null | grep "current-context:" | sed "s/current-context: //")
 
     if [ -n "$CONTEXT" ]; then
-        KUBE=" ${YELLOW}(${CONTEXT})${COLOR_NONE} "
+        KUBE="${YELLOW}${CONTEXT}${COLOR_NONE}"
     fi
 }
 
@@ -74,20 +74,8 @@ function set_prompt_symbol () {
 }
 
 # Determine active Python virtualenv details.
-function set_virtualenv () {
-  if test -z "$VIRTUAL_ENV" ; then
-      PYTHON_VIRTUALENV=""
-  else
-      PYTHON_VIRTUALENV="${CYAN}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
-  fi
-}
-
-function set_nodevirtenv () {
-  if test -z "$NODE_VIRTUAL_ENV" ; then
-      NODE_VIRTUALENV=""
-  else
-      NODE_VIRTUALENV="${PURPLE}[`basename \"$NODE_VIRTUAL_ENV\"`]${COLOR_NONE} "
-  fi
+function set_conda_env () {
+  CONDA_ENV="${CYAN}${CONDA_DEFAULT_ENV}${COLOR_NONE}"
 }
 
 # Set the full bash prompt.
@@ -97,7 +85,7 @@ function set_bash_prompt () {
   set_prompt_symbol $?
 
   # Set the PYTHON_VIRTUALENV variable.
-  set_virtualenv
+  set_conda_env
 
   # Set the NODE_PYTHON_VIRTUALENV variable.
   # set_nodevirtenv
@@ -113,7 +101,7 @@ function set_bash_prompt () {
 
   PROMPT_DIRTRIM=2
   # Set the bash prompt variable.
-  PS1="${LIGHT_GREEN}\u@\h ${CYAN}(${CONDA_DEFAULT_ENV})${COLOR_NONE}${BLUE} \w${COLOR_NONE}${KUBE} ${BRANCH}${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GREEN}\u${COLOR_NONE} ${CONDA_ENV} ${KUBE} ${BRANCH} ${BLUE}\w${COLOR_NONE} ${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
