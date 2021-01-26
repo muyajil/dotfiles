@@ -45,7 +45,8 @@ pkgToRemoveListFull="libreoffice-base \
     docker-engine \
     docker.io \
     containerd \
-    runc"
+    runc \
+    rhythmbox"
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(sudo dpkg --status $pkgToRemove &> /dev/null)
