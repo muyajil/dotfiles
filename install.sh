@@ -97,7 +97,7 @@ curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key
 sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
 
 # Add wavebox repository
-sudo -fsSL https://wavebox.io/dl/client/repo/archive.key | sudo apt-key add -
+curl -fsSL https://wavebox.io/dl/client/repo/archive.key | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.wavebox.app/stable/linux/deb/ amd64/"
 
 # Update and install all needed packages
