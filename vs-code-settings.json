@@ -36,5 +36,6 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "editor.fontSize": 12,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.editorAssociations": []
 }

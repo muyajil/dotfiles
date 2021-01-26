@@ -3,7 +3,9 @@ current_dir=$(pwd)
 
 # Add scripts
 sudo cp $current_dir/dcps.py /usr/local/bin/dcps
-sudo cp $current_dir/save_env.sh /usr/local/bin/save_env
+sudo cp $current_dir/save_env.sh /usr/local/bin/save-env
+sudo cp $current_dir/c.sh /usr/local/bin/c
+sudo cp $current_dir/add_kernel.sh /usr/local/bin/add-kernel
 
 # Execute scripts in ~/.bashrc
 bash_config_path=$current_dir/bash_prompt.sh
@@ -69,7 +71,6 @@ sudo usermod -aG docker $USER
 # miniconda
 curl -fsSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash /tmp/miniconda.sh -b -p $HOME/miniconda3
-conda install tabulate
 
 # LatexDocker
 sudo wget -O /usr/local/bin/latexdocker https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
