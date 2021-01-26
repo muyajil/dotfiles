@@ -119,6 +119,8 @@ read -p "Press enter to execute next step"
 echo "Install miniconda..."
 curl -fsSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash /tmp/miniconda.sh -b -p $HOME/miniconda3
+# Needed for dcps.py
+conda install tabulate
 read -p "Press enter to execute next step"
 
 # LatexDocker
