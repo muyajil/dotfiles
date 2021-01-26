@@ -27,7 +27,7 @@ read -p "Press enter to execute next step"
 
 # Uninstall unnecessary things
 echo "Uninstall unneeded packages..."
-pkgToRemoveListFull="libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-draw libreoffice-gnome libreoffice-gtk libreoffice-help-en-us libreoffice-impress libreoffice-math libreoffice-ogltrans libreoffice-pdfimport libreoffice-presentation-minimizer libreoffice-writer python3-uno firefox docker docker-engine docker.io containerd runc"
+pkgToRemoveListFull="libreoffice-base libreoffice-base-core libreoffice-calc libreoffice-draw libreoffice-gnome libreoffice-gtk libreoffice-help-en-us libreoffice-impress libreoffice-math libreoffice-ogltrans libreoffice-pdfimport libreoffice-presentation-minimizer libreoffice-writer python3-uno firefox thunderbird docker docker-engine docker.io containerd runc"
 pkgToRemoveList=""
 for pkgToRemove in $(echo $pkgToRemoveListFull); do
   $(sudo dpkg --status $pkgToRemove &> /dev/null)
