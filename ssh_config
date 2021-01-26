@@ -3,8 +3,8 @@ Host srv.ajil.ch
     Port 22221
     ForwardX11 yes
     Compression yes
-#   Ciphers +blowfish-cbc,arcfour
     User muy
+    IdentityFile ~/.ssh/id_rsa
 
 # QuantCo Github
 Host github.com-mohammedajilqc
@@ -18,7 +18,8 @@ Host github.com-muyajil
     User git
     IdentityFile ~/.ssh/id_rsa
 
-#Host socks_proxy
-#    HostName srv.ajil.ch
-#    Port 2221
-#    DynamicForward:8080
+Host dev08.ascarix.local
+    HostName dev08.ascarix.local
+    Forward X11 yes
+    User muy
+    IdentityFile ~/.ssh/id_rsa
