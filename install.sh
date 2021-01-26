@@ -161,3 +161,5 @@ rm $HOME/.config/Code/User/settings.json || true
 ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
 mkdir -p $HOME/.ssh
 ln -s $current_dir/ssh_config ~/.ssh/config
+
+read -p "Installation finished. Press enter to finish."
