@@ -20,6 +20,6 @@ Host github.com-muyajil
 
 Host dev08.ascarix.local
     HostName dev08.ascarix.local
-    Forward X11 yes
+    ForwardX11 yes
     User muy
     IdentityFile ~/.ssh/id_rsa
