@@ -6,7 +6,7 @@ echo "Add scripts to /usr/local/bin..."
 sudo cp $current_dir/dcps.py /usr/local/bin/dcps
 sudo cp $current_dir/save_env.sh /usr/local/bin/save-env
 sudo cp $current_dir/c.sh /usr/local/bin/c
-sudo cp $current_dir/add_kernel.sh /usr/local/bin/add-kernel
+sudo cp $current_dir/add-kernel.sh /usr/local/bin/add-kernel
 read -p "Press enter to execute next step"
 
 # Execute scripts in ~/.bashrc
