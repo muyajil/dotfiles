@@ -68,6 +68,10 @@ sudo apt install -y \
 # Docker Post Install
 sudo usermod -aG docker $USER
 
+# Docker Compose Install
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 # miniconda
 curl -fsSL -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash /tmp/miniconda.sh -b -p $HOME/miniconda3
