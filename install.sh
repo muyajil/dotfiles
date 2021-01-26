@@ -23,6 +23,9 @@ sudo apt update
 sudo apt remove libreoffice* firefox docker docker-engine docker.io containerd runc
 sudo apt autoremove
 
+# Upgrade
+sudo apt upgrade
+
 # Install basic tools
 sudo apt install -y \
     apt-transport-https \
