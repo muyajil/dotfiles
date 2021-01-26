@@ -1,1 +1,1 @@
-echo "export PYTHONDONTWRITEBYTECODE=1"
+

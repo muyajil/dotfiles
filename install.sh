@@ -11,15 +11,18 @@ read -p "Press enter to execute next step"
 
 # Execute scripts in ~/.bashrc
 echo "Source configs in ~/.bashrc..."
-bash_config_path=$current_dir/bash_prompt.sh
-aliases_path=$current_dir/aliases.sh
-paths_path=$current_dir/paths.sh
-env_vars_path=$current_dir/env_vars.sh
+if ! grep -q dotfile "$HOME/.bashrc"; then
+    bash_config_path=$current_dir/bash_prompt.sh
+    aliases_path=$current_dir/aliases.sh
+    paths_path=$current_dir/paths.sh
+    env_vars_path=$current_dir/env_vars.sh
 
-echo "source $bash_config_path" >> ~/.bashrc
-echo "source $aliases_path" >> ~/.bashrc
-echo "source $paths_path" >> ~/.bashrc
-echo "source $env_vars_path" >> ~/.bashrc
+    echo "# source dotfile scripts" >> ~/.bashrc
+    echo "source $bash_config_path" >> ~/.bashrc
+    echo "source $aliases_path" >> ~/.bashrc
+    echo "source $paths_path" >> ~/.bashrc
+    echo "source $env_vars_path" >> ~/.bashrc
+fi
 read -p "Press enter to execute next step"
 
 # Uninstall unnecessary things
@@ -40,6 +43,7 @@ read -p "Press enter to execute next step"
 echo "Upgrade system..."
 sudo apt update
 sudo apt upgrade
+sudo apt autoremove
 read -p "Press enter to execute next step"
 
 # Install basic tools
@@ -59,18 +63,30 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 
 # Add Kubernetes repository
 curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-sudo add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-$(lsb_release -cs) main"
+sudo add-apt-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
 
 # Add Google Cloud SDK repository
 curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-sudo add-apt-repository "deb http://packages.cloud.google.com/apt cloud-sdk-$(lsb_release -cs) main"
+sudo add-apt-repository "deb http://packages.cloud.google.com/apt cloud-sdk main"
+
+# Add VS Code repository
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"
+
+# Add Chrome repository
+curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+
+# Add Slack repository
+curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
 read -p "Press enter to execute next step"
 
 # Update and install all needed packages
 echo "Install main packages..."
 sudo apt update
 sudo apt install -y \
-    git-core \
+    git \
     code \
     slack-desktop \
     google-chrome-stable \
@@ -95,7 +111,7 @@ read -p "Press enter to execute next step"
 
 # Docker Compose Install
 echo "Install docker-compose..."
-sudo curl -L "https://github.com/docker/compose/releases/download/1.28.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -fsSL "https://github.com/docker/compose/releases/download/1.28.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 read -p "Press enter to execute next step"
 
@@ -107,7 +123,7 @@ read -p "Press enter to execute next step"
 
 # LatexDocker
 echo "Install latexdocker..."
-sudo wget -O /usr/local/bin/latexdocker https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
+sudo curl -fsSL -o /usr/local/bin/latexdocker https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
 sudo chmod +x /usr/local/bin/latexdocker
 read -p "Press enter to execute next step"
 
@@ -124,7 +140,9 @@ read -p "Press enter to execute next step"
 
 # Link configs
 echo "Link configs..."
-rm ~/.config/Code/User/settings.json || true
+rm $HOME/.config/Code/User/settings.json || true
+mkdir -p $HOME/.config/Code/User
 ln -s $current_dir/vs-code-settings.json ~/.config/Code/User/settings.json
+mkdir -p $HOME/.ssh
 ln -s $current_dir/ssh_config ~/.ssh/config
 read -p "Press enter to finish installation"
