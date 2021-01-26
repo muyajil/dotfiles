@@ -32,7 +32,7 @@ for pkgToRemove in $(echo $pkgToRemoveListFull); do
     pkgToRemoveList="$pkgToRemoveList $pkgToRemove"
   fi
 done
-apt-get --yes --purge remove $pkgToRemoveList
+sudo apt-get --yes --purge remove $pkgToRemoveList
 sudo apt autoremove
 read -p "Press enter to execute next step"
 
