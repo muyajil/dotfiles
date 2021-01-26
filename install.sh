@@ -96,6 +96,10 @@ sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/
 curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
 
+# Add wavebox repository
+sudo -fsSL https://wavebox.io/dl/client/repo/archive.key | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.wavebox.app/stable/linux/deb/ amd64/"
+
 # Update and install all needed packages
 read -p "Press enter to execute next step: Install main packages..."
 sudo apt update
@@ -117,7 +121,8 @@ sudo apt install -y \
     kubectl \
     docker-ce \
     docker-ce-cli \
-    containerd.io
+    containerd.io \
+    wavebox
 
 # Docker Post Install
 sudo usermod -aG docker $USER
