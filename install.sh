@@ -94,8 +94,8 @@ curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add 
 sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
 
 # Add Slack repository
-curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
+# curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
+# sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
 
 # Update and install all needed packages
 read -p "Press enter to execute next step: Install main packages..."
@@ -103,7 +103,7 @@ sudo apt update
 sudo apt install -y \
     git \
     code \
-    slack-desktop \
+    # slack-desktop \
     google-chrome-stable \
     guake \
     htop \
