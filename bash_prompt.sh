@@ -102,7 +102,7 @@ function set_bash_prompt () {
 
   PROMPT_DIRTRIM=2
   # Set the bash prompt variable.
-  PS1="${LIGHT_GREEN}\u@\h${COLOR_NONE} / ${CONDA_ENV} / ${KUBE} / ${BRANCH} / ${BLUE}\w${COLOR_NONE} ${PROMPT_SYMBOL} "
+  PS1="${RED}[\h]${COLOR_NONE} ${LIGHT_GREEN}\u${COLOR_NONE} / ${CONDA_ENV} / ${KUBE} / ${BRANCH} / ${BLUE}\w${COLOR_NONE} ${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
