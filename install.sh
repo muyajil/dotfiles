@@ -89,13 +89,12 @@ sudo add-apt-repository "deb http://packages.cloud.google.com/apt cloud-sdk main
 curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/repos/code stable main"
 
+# Add Azure CLI repository
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main"
+
 # Add Chrome repository
 curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-
-# Add Slack repository
-# curl -fsSL https://packagecloud.io/slacktechnologies/slack/gpgkey | sudo apt-key add -
-# sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main"
 
 # Update and install all needed packages
 read -p "Press enter to execute next step: Install main packages..."
@@ -103,7 +102,6 @@ sudo apt update
 sudo apt install -y \
     git \
     code \
-    # slack-desktop \
     google-chrome-stable \
     guake \
     htop \
@@ -115,6 +113,7 @@ sudo apt install -y \
     tp-smapi-dkms \
     acpi-call-dkms \
     google-cloud-sdk \
+    azure-cli \
     kubectl \
     docker-ce \
     docker-ce-cli \
