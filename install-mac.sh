@@ -27,13 +27,21 @@ echo "source $env_vars_path" >> ~/.zshrc
 echo 'export ZSH="$HOME/.oh-my-zsh"' >> ~/.zshrc
 echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
 
+# Install plugins and themes for zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestiosns
+curl -fsSL -o $HOME/.oh-my-zsh/custom/themes/bullet-train.zsh-theme http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+
+# Install fonts
+git clone https://github.com/powerline/fonts.git $HOME/repositories/fonts
+$HOME/repositories/fonts/install.sh
+
 # Install homebrew
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Tools
-brew install --cask docker visual-studio-code mountain-duck miniconda google-cloud-sdk google-chrome
+brew install --cask docker visual-studio-code mountain-duck miniconda google-cloud-sdk google-chrome iterm2
 brew install node docker-compose
 
 # Needed for dcps.py
