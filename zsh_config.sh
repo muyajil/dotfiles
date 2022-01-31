@@ -4,7 +4,7 @@ prompt_conda() {
 }
 TERM="xterm-256color"
 BULLETTRAIN_PROMPT_ORDER=(
-    time
+    # time
     status
     custom
     # context
