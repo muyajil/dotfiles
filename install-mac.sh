@@ -37,7 +37,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # Install fonts
 git clone https://github.com/powerline/fonts.git $HOME/repositories/fonts
-mkdir $HOME/repositories/fonts/meslo
+mkdir $HOME/repositories/fonts/MesloLGS
 curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
 curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
 curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
