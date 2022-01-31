@@ -22,7 +22,7 @@ BULLETTRAIN_PROMPT_ORDER=(
     # hg
     cmd_exec_time
   )
-BULLETTRAIN_VIRTUALENV_FG=black
+# BULLETTRAIN_VIRTUALENV_FG=black
 plugins=(
     git
     zsh-autosuggestions
