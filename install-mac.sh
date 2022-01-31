@@ -3,7 +3,6 @@
 current_dir=$(pwd)
 
 # Add scripts
-read -p "Press enter to execute next step: Add scripts to /usr/local/bin..."
 sudo cp $current_dir/dcps.py /usr/local/bin/dcps
 sudo cp $current_dir/c.sh /usr/local/bin/c
 
@@ -55,6 +54,8 @@ brew install node docker-compose
 
 # Needed for dcps.py
 conda install tabulate
+
+# Conda config
 conda init zsh
 conda config --set changeps1 False
 
