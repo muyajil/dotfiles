@@ -26,5 +26,6 @@ BULLETTRAIN_PROMPT_ORDER=(
 plugins=(
     git
     zsh-autosuggestions
-    sudo)
+    sudo
+    gcloud)
 # More configuration options for theme https://github.com/caiogondim/bullet-train.zsh
