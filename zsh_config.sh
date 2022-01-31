@@ -1,10 +1,10 @@
-ZSH_THEME="bullet-train"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 prompt_conda() {
   prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(conda info | awk '{print $4}' | sed -n '2p')"
 }
 TERM="xterm-256color"
 BULLETTRAIN_PROMPT_ORDER=(
-    time
+    # time
     status
     custom
     # context

@@ -13,6 +13,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 rm -f ~/.zshrc
 
 # Execute scripts in ~/.zshrc
+cd $HOME/repositories/dotfiles
+current_dir=$(pwd)
 zsh_config_path=$current_dir/zsh_config.sh
 aliases_path=$current_dir/aliases.sh
 paths_path=$current_dir/paths.sh
@@ -31,9 +33,15 @@ echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 curl -fsSL -o $HOME/.oh-my-zsh/custom/themes/bullet-train.zsh-theme http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 curl -fsSL -o $HOME/Downloads/Tomorrow\ Night\ Eighties.terminal https://github.com/chriskempson/tomorrow-theme/raw/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install fonts
 git clone https://github.com/powerline/fonts.git $HOME/repositories/fonts
+mkdir $HOME/repositories/fonts/meslo
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Bold\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 $HOME/repositories/fonts/install.sh
 
 # Install homebrew
@@ -51,10 +59,11 @@ conda init zsh
 conda config --set changeps1 False
 
 # Configs
+current_dir=$(pwd)
 mkdir -p $HOME/Library/Application\ Support/Code/User
 rm $HOME/Library/Application\ Support/Code/User/settings.json || true
 ln -s $current_dir/vs-code-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 mkdir -p $HOME/.ssh
 ln -s $current_dir/ssh_config ~/.ssh/config
 
-echo "You need to import the color palette in the downloads folder and set it as default for terminal"
+echo "You need to import the color palette in the downloads folder and set it as default for terminal and choose a powerline font as well"
