@@ -33,9 +33,15 @@ echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 curl -fsSL -o $HOME/.oh-my-zsh/custom/themes/bullet-train.zsh-theme http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 curl -fsSL -o $HOME/Downloads/Tomorrow\ Night\ Eighties.terminal https://github.com/chriskempson/tomorrow-theme/raw/master/OS%20X%20Terminal/Tomorrow%20Night%20Eighties.terminal
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install fonts
 git clone https://github.com/powerline/fonts.git $HOME/repositories/fonts
+mkdir $HOME/repositories/fonts/meslo
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Bold.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+curl -fsSL -o $HOME/repositories/fonts/MesloLGS/MesloLGS\ NF\ Bold\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 $HOME/repositories/fonts/install.sh
 
 # Install homebrew
