@@ -13,6 +13,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 rm -f ~/.zshrc
 
 # Execute scripts in ~/.zshrc
+cd $HOME/repositories/dotfiles
+current_dir=$(pwd)
 zsh_config_path=$current_dir/zsh_config.sh
 aliases_path=$current_dir/aliases.sh
 paths_path=$current_dir/paths.sh
@@ -51,10 +53,11 @@ conda init zsh
 conda config --set changeps1 False
 
 # Configs
+current_dir=$(pwd)
 mkdir -p $HOME/Library/Application\ Support/Code/User
 rm $HOME/Library/Application\ Support/Code/User/settings.json || true
 ln -s $current_dir/vs-code-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 mkdir -p $HOME/.ssh
 ln -s $current_dir/ssh_config ~/.ssh/config
 
-echo "You need to import the color palette in the downloads folder and set it as default for terminal"
+echo "You need to import the color palette in the downloads folder and set it as default for terminal and choose a powerline font as well"
