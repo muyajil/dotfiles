@@ -35,7 +35,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.fontSize": 12,
-    "explorer.confirmDelete": false,
-    "workbench.editorAssociations": []
+    "editor.fontSize": 17,
+    "explorer.confirmDelete": false
 }

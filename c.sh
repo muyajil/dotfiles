@@ -1,1 +1,1 @@
-python -c "print(\"$1 =\", $1)"
+python3 -c "print(\"$1 =\", $1)"
