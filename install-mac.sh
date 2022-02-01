@@ -55,6 +55,7 @@ brew install node docker-compose
 
 # Needed for dcps.py
 conda install tabulate
+sudo xattr -d com.apple.quarantine /usr/local/bin/dcps
 
 # Conda config
 conda init zsh
