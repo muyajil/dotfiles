@@ -1,4 +1,4 @@
-#!/home/muy/miniconda3/bin/python
+#!/usr/bin/python3
 import subprocess
 from tabulate import tabulate
 

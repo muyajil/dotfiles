@@ -3,6 +3,7 @@
 current_dir=$(pwd)
 
 # Add scripts
+sudo mkdir /usr/local/bin
 sudo cp $current_dir/dcps.py /usr/local/bin/dcps
 sudo cp $current_dir/c.sh /usr/local/bin/c
 
