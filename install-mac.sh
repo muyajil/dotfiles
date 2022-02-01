@@ -49,9 +49,22 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install Tools
-brew install --cask docker visual-studio-code mountain-duck miniconda google-cloud-sdk google-chrome iterm2
-brew install node docker-compose
+# Install Tools & Software
+brew install \
+    docker \
+    visual-studio-code \
+    mountain-duck \
+    node \
+    miniconda \
+    google-cloud-sdk \
+    google-chrome \
+    bitwarden \
+    whatsapp \
+    signal \
+    slack \
+    microsoft-teams \
+    threema \
+    plex
 
 # Needed for dcps.py
 conda install tabulate
