@@ -6,6 +6,7 @@ current_dir=$(pwd)
 sudo mkdir /usr/local/bin
 sudo cp $current_dir/dcps.py /usr/local/bin/dcps
 sudo cp $current_dir/c.sh /usr/local/bin/c
+sudo cp $current_dir/conda-pip-install.sh /usr/local/bin/conda-pip-install
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

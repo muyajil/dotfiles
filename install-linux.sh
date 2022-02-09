@@ -7,6 +7,8 @@ sudo cp $current_dir/dcps.py /usr/local/bin/dcps
 sudo cp $current_dir/save_env.sh /usr/local/bin/save-env
 sudo cp $current_dir/c.sh /usr/local/bin/c
 sudo cp $current_dir/add-kernel.sh /usr/local/bin/add-kernel
+sudo cp $current_dir/conda-pip-install.sh /usr/local/bin/conda-pip-install
+
 
 # Execute scripts in ~/.bashrc
 read -p "Press enter to execute next step: Source configs in ~/.bashrc..."
