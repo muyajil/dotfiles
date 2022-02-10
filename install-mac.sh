@@ -20,12 +20,14 @@ zsh_config_path=$current_dir/zsh_config.sh
 aliases_path=$current_dir/aliases.sh
 paths_path=$current_dir/paths.sh
 env_vars_path=$current_dir/env_vars.sh
+brew_completions=$current_dir/brew_completions.sh
 
 echo "# source dotfile scripts" >> ~/.zshrc
 echo "source $zsh_config_path" >> ~/.zshrc
 echo "source $aliases_path" >> ~/.zshrc
 echo "source $paths_path" >> ~/.zshrc
 echo "source $env_vars_path" >> ~/.zshrc
+echo "source $brew_completions" >> ~/.zshrc
 
 echo 'export ZSH="$HOME/.oh-my-zsh"' >> ~/.zshrc
 echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
