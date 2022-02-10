@@ -1,0 +1,1 @@
+while read requirement; do echo $requirement; conda install -c conda-forge --yes $requirement || pip install $requirement; done < $1
