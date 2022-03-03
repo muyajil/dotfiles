@@ -47,5 +47,6 @@
         "yaml": true,
         "plaintext": true,
         "markdown": false
-    }
+    },
+    "python.defaultInterpreterPath": "/opt/homebrew/Caskroom/miniconda/base/envs/mp3/bin/python"
 }

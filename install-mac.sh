@@ -67,7 +67,8 @@ brew install \
     slack \
     microsoft-teams \
     threema \
-    plex
+    plex \
+    yt-dlp
 
 # Needed for dcps.py
 conda install tabulate
