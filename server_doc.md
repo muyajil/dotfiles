@@ -19,7 +19,7 @@ https://askubuntu.com/a/1321192
 - Route traffic from vpn server to vpn client:
   - First we need to add a rule that will use the wgclient lookup table to forward traffic
   `ip rule add iif wgsrv1 lookup 211.wgclt1`
-  - Optional: There however we have a line missing, which allows the network to go over the gateway back to the lan
+  - Optional: There however we have a line missing, which allows the network to go over the gateway back to the lan, this is only required if VPN client should be able to talk to each other
   `ip route add 192.168.150.0/24 dev wgsrv1 proto kernel scope link src 192.168.150.1 table 211.wgclt1`
   - And then again add a line to be able to go to the base network
   `ip route add 192.168.100.0/24 dev br0 proto kernel scope link src 192.168.100.1 table 211.wgclt1`
