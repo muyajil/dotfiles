@@ -14,7 +14,7 @@ mdadm --zero-superblock /dev/sdd
 Its most likely about some C6 Power State
 https://askubuntu.com/a/1321192
 
-## UDM Pro
+## UDM Pro VPN Rerouting
 
 - Route traffic from vpn server to vpn client:
   - First we need to add a rule that will use the wgclient lookup table to forward traffic
@@ -26,9 +26,14 @@ https://askubuntu.com/a/1321192
 
 - To be able to have nextdns running with protonvpn change the dns server 192.168.150.1 in the wireguard config
 
+## UDM Pro NextDNS Setup
 - Install nextdns on udm pro
   `sh -c 'sh -c "$(curl -sL https://nextdns.io/install)"'`
 
 ## Install Wireguard Client and Connect to Server
 
 - https://developerinsider.co/how-to-set-up-wireguard-client-on-ubuntu/
+
+## Mount SMB Share on Ubuntu
+
+- https://www.linode.com/docs/guides/linux-mount-smb-share/
