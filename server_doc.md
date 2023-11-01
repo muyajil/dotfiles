@@ -1,6 +1,6 @@
 # Server Docs
 
-## Replace Disk in RAID
+## Remove Disk in RAID
 
 ```shell
 echo "idle" >  /sys/block/md0/md/sync_action 
