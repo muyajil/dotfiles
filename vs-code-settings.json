@@ -5,7 +5,6 @@
     "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "python.linting.pylintEnabled": false,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "window.zoomLevel": 0,
     "editor.wrappingIndent": "indent",
     "editor.renderWhitespace": "all",
     "files.associations": {
@@ -13,33 +12,34 @@
         "Dockerfile*": "dockerfile"
     },
     "explorer.confirmDragAndDrop": false,
-    "autoDocstring.docstringFormat": "numpy",
     "python.testing.pytestEnabled": true,
     "terminal.integrated.inheritEnv": false,
     "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/opt/homebrew/bin/black",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": [
         "--max-line-length=120"
     ],
-    "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.highlights.enabled": true,
-    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.linting.flake8Path": "/opt/homebrew/bin/flake8",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+    },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "editor.fontSize": 14,
     "explorer.confirmDelete": false,
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Monokai",
     "editor.suggestSelection": "first",
+    "autoDocString.docstringFormat": "google",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
@@ -48,5 +48,36 @@
         "plaintext": true,
         "markdown": false
     },
-    "python.defaultInterpreterPath": "/opt/homebrew/Caskroom/miniconda/base/envs/mp3/bin/python"
+    "python.defaultInterpreterPath": "/opt/homebrew/Caskroom/mambaforge/base/bin/python",
+    "jupyter.askForKernelRestart": false,
+    "cSpell.userWords": [
+        "autoupdate",
+        "buildx",
+        "conda",
+        "dataframe",
+        "dataframes",
+        "distroless",
+        "docai",
+        "fsspec",
+        "ipynb",
+        "lockfiles",
+        "mambaforge",
+        "quantco",
+        "QUETZ",
+        "randint",
+        "Streamlit",
+        "Tesseract",
+        "tqdm",
+        "unittests",
+        "unshallow",
+        "withdirs"
+    ],
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "redhat.telemetry.enabled": false
 }

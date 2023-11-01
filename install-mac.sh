@@ -57,18 +57,16 @@ brew install \
     docker \
     visual-studio-code \
     mountain-duck \
-    node \
     miniconda \
-    google-cloud-sdk \
     google-chrome \
     bitwarden \
     whatsapp \
     signal \
     slack \
-    microsoft-teams \
     threema \
     plex \
-    yt-dlp
+    yt-dlp \
+    gh
 
 # Needed for dcps.py
 conda install tabulate

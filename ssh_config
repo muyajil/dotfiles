@@ -1,25 +1,5 @@
-Host srv.ajil.ch
+Include ~/.orbstack/ssh/config
+
+Host srv
+    User muy
     HostName srv.ajil.ch
-    Port 22221
-    ForwardX11 yes
-    Compression yes
-    User muy
-    IdentityFile ~/.ssh/id_rsa
-
-# QuantCo Github
-Host github.com-mohammedajilqc
-    Hostname github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa_qc
-
-# Private Github
-Host github.com-muyajil
-    Hostname github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa
-
-Host dev08.ascarix.local
-    HostName dev08.ascarix.local
-    ForwardX11 yes
-    User muy
-    IdentityFile ~/.ssh/id_rsa
