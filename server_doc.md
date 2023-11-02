@@ -1,5 +1,8 @@
 # Server Docs
 
+## Install driver for Arc a380
+https://dgpu-docs.intel.com/driver/client/overview.html
+
 ## Remove Disk in RAID
 
 ```shell
