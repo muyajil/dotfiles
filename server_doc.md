@@ -12,6 +12,10 @@ mdadm --manage /dev/md0 --remove/dev/sdd
 mdadm --zero-superblock /dev/sdd
 ```
 
+```shell
+echo check > /sys/block/md0/md/sync_action
+```
+
 ## Server hangs randomly
 
 Its most likely about some C6 Power State
